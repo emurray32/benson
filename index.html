@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Benson — Pet of the Month, The Gunther</title>
+<meta name="description" content="Officially the best dog at The Gunther. Documented evidence below.">
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --paper: #fbf6ec;
+    --accent: #c97a2b;
+    --accent-dark: #7d4515;
+    --caption-bg: rgba(255, 252, 245, 0.96);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: ui-rounded, "SF Pro Rounded", "Avenir Next", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  header {
+    text-align: center;
+    padding: 48px 24px 24px;
+    position: relative;
+  }
+  .crown {
+    font-size: 56px;
+    line-height: 1;
+    display: inline-block;
+    transform: rotate(-6deg);
+  }
+  h1 {
+    font-family: Georgia, "Playfair Display", serif;
+    font-weight: 900;
+    font-size: clamp(40px, 8vw, 80px);
+    margin: 8px 0 4px;
+    letter-spacing: -0.02em;
+    color: var(--accent-dark);
+  }
+  .sub {
+    font-size: clamp(15px, 2vw, 19px);
+    color: #6a4a2a;
+    margin: 0 auto;
+    max-width: 620px;
+    padding: 0 16px;
+  }
+  .sub em { color: var(--accent); font-style: normal; font-weight: 700; }
+  .ribbon {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 6px 22px;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 4px;
+    margin-top: 14px;
+    box-shadow: 0 2px 0 var(--accent-dark);
+  }
+  main {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px 16px 80px;
+  }
+  .gallery {
+    columns: 3 280px;
+    column-gap: 18px;
+  }
+  .card {
+    break-inside: avoid;
+    margin-bottom: 18px;
+    border-radius: 14px;
+    overflow: hidden;
+    background: white;
+    box-shadow:
+      0 1px 0 rgba(0,0,0,0.04),
+      0 6px 20px rgba(60, 30, 0, 0.10);
+    transform: rotate(var(--tilt, 0deg));
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .card:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: 0 10px 28px rgba(60, 30, 0, 0.20);
+  }
+  .card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #eee;
+  }
+  .caption {
+    padding: 12px 16px 14px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2a1a05;
+    background: var(--caption-bg);
+    border-top: 2px dashed rgba(201, 122, 43, 0.4);
+  }
+  .caption .small { display:block; font-size: 12px; font-weight: 500; color: #8a6240; margin-top: 4px; letter-spacing: 0.04em; text-transform: uppercase; }
+  footer {
+    text-align: center;
+    padding: 40px 20px 64px;
+    color: #8a6240;
+    font-size: 14px;
+  }
+  footer .stamp {
+    display: inline-block;
+    border: 2px solid var(--accent);
+    color: var(--accent-dark);
+    padding: 10px 22px;
+    border-radius: 8px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    transform: rotate(-3deg);
+    margin-bottom: 12px;
+  }
+  .card:nth-child(3n+1) { --tilt: -1.2deg; }
+  .card:nth-child(3n+2) { --tilt:  0.8deg; }
+  .card:nth-child(3n+3) { --tilt: -0.4deg; }
+</style>
+</head>
+<body>
+<header>
+  <div class="crown">👑</div>
+  <h1>Benson</h1>
+  <p class="sub">Pet of the Month at <em>The Gunther</em>, Baltimore · June 2026<br>
+  Approximately 24 pounds of opinion in a small, dignified package.</p>
+  <span class="ribbon">Pet of the Month</span>
+</header>
+
+<main>
+  <div class="gallery">
+
+    <figure class="card">
+      <img src="bourbon.jpg" alt="Benson posing next to a bottle of Bardstown bourbon">
+      <figcaption class="caption">"I'd like to make a toast."<span class="small">Sophisticated palate</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="shocked.jpg" alt="Benson with wide eyes and tongue poking out, looking shocked">
+      <figcaption class="caption">Wait. You SAW that?<span class="small">Caught in the act</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="wig.jpg" alt="Benson with a wig of human hair on his head, chewing a ribbon">
+      <figcaption class="caption">First day at the office. Going great.<span class="small">Power look</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="tilt.jpg" alt="Benson head-tilting at the camera">
+      <figcaption class="caption">Did you say... <em>walk</em>?<span class="small">Vocabulary of 4</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="burrito.jpg" alt="Benson swaddled in a blue blanket like a burrito">
+      <figcaption class="caption">Reporting live from inside the burrito.<span class="small">Field correspondent</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="upsidedown.jpg" alt="Benson upside down with one eye visible">
+      <figcaption class="caption">"This is fine. Everything is fine."<span class="small">Emotional range</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="laptop.jpg" alt="Benson sitting next to a laptop watching closely">
+      <figcaption class="caption">Code review, in progress.<span class="small">Working from home</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="heatpad.jpg" alt="Benson lounging on a heating pad like royalty">
+      <figcaption class="caption">The throne is heated. Bow accordingly.<span class="small">Lifestyle creep</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="wrinkly.jpg" alt="Close-up of Benson's wrinkly sleeping face with a yellow collar">
+      <figcaption class="caption">Do not perceive me. I am simply ham.<span class="small">Maximum potato</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="sploot.jpg" alt="Benson splooting flat for a nap on an orange and green blanket">
+      <figcaption class="caption">Battery: 0%. Do not disturb.<span class="small">World-class sploot</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="bigear.jpg" alt="Benson with one ear standing dramatically taller than the other">
+      <figcaption class="caption">All ears. Mostly the one.<span class="small">Reception is great</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="detective.jpg" alt="Benson on a Baltimore sidewalk in a harness, investigating the ground">
+      <figcaption class="caption">Conducting important sidewalk forensics.<span class="small">Field work</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="peek.jpg" alt="One eye of Benson visible, the rest of his face buried in a blanket">
+      <figcaption class="caption">Witness protection program.<span class="small">Identity protected</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="pilsner.jpg" alt="Benson on the couch in the Pilsner apartment with brick archway behind">
+      <figcaption class="caption">Welcome to Apt. 134. Tour starts at 7. Tip your guide.<span class="small">Real estate mogul</span></figcaption>
+    </figure>
+
+    <figure class="card">
+      <img src="judge.jpg" alt="Benson standing on a blue couch staring directly at the camera">
+      <figcaption class="caption">Yes I see you. Yes I am judging.<span class="small">The verdict</span></figcaption>
+    </figure>
+
+  </div>
+</main>
+
+<footer>
+  <div class="stamp">Certified Good Boy</div>
+  <p>Benson · The Gunther, Apt. 134 · Baltimore, MD</p>
+</footer>
+</body>
+</html>
