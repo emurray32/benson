@@ -124,42 +124,40 @@
   .card:nth-child(3n+2) { --tilt:  0.8deg; }
   .card:nth-child(3n+3) { --tilt: -0.4deg; }
 
-  /* Audio card */
-  .audio-card .audio-art {
-    aspect-ratio: 3 / 4;
-    background:
-      radial-gradient(circle at 30% 30%, #e8c98a 0%, #c97a2b 60%, #7d4515 100%);
+  /* Audio banner — sits between gallery and footer stamp */
+  .audio-banner {
+    max-width: 720px;
+    margin: 8px auto 0;
+    padding: 28px 28px 24px;
+    background: radial-gradient(circle at 30% 30%, #e8c98a 0%, #c97a2b 65%, #7d4515 100%);
     color: #fffaf0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 24px;
+    border-radius: 16px;
     text-align: center;
+    box-shadow: 0 6px 22px rgba(60, 30, 0, 0.18);
   }
-  .audio-card .audio-art .emoji { font-size: 96px; line-height: 1; margin-bottom: 18px; }
-  .audio-card .audio-art h3 {
-    margin: 0;
+  .audio-banner .emoji { font-size: 44px; line-height: 1; }
+  .audio-banner h3 {
+    margin: 8px 0 4px;
     font-family: Georgia, "Playfair Display", serif;
     font-weight: 900;
-    font-size: 38px;
+    font-size: 32px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     text-shadow: 0 2px 0 rgba(0,0,0,0.15);
   }
-  .audio-card .audio-art p {
-    margin: 10px 0 0;
-    font-size: 14px;
+  .audio-banner p {
+    margin: 0 0 16px;
+    font-size: 12px;
     opacity: 0.92;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 700;
   }
-  .audio-card audio {
+  .audio-banner audio {
     width: 100%;
+    max-width: 480px;
     display: block;
-    padding: 14px 16px 16px;
-    background: var(--caption-bg);
+    margin: 0 auto;
   }
 </style>
 </head>
@@ -193,18 +191,6 @@
     <figure class="card">
       <img src="tilt.jpg" alt="Benson head-tilting at the camera">
       <figcaption class="caption">Did you say... <em>walk</em>?<span class="small">Vocabulary of 4</span></figcaption>
-    </figure>
-
-    <figure class="card audio-card">
-      <div class="audio-art">
-        <div class="emoji">🎧</div>
-        <h3>Benson Noises</h3>
-        <p>Field recording · Puppuccino</p>
-      </div>
-      <audio controls preload="none">
-        <source src="benson-noises.m4a" type="audio/mp4">
-        Your browser doesn't support audio playback. Lucky you.
-      </audio>
     </figure>
 
     <figure class="card">
@@ -264,6 +250,16 @@
 
   </div>
 </main>
+
+<section class="audio-banner" aria-label="Audio: Benson Noises">
+  <div class="emoji">🎧</div>
+  <h3>Benson Noises</h3>
+  <p>Field recording · Puppuccino</p>
+  <audio controls preload="none">
+    <source src="benson-noises.m4a" type="audio/mp4">
+    Your browser doesn't support audio playback. Lucky you.
+  </audio>
+</section>
 
 <footer>
   <div class="stamp">Certified Good Boy</div>
