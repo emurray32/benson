@@ -1,11 +1,15 @@
 Hi Michelle,
 
-Here’s Benson for September Pet of the Month.
+Here's Benson for September Pet of the Month.
 
-Benson is a 30-pound French Bulldog with the soul of a much larger, much more confident dog. He has opinions about dinner, the elevator, the courtyard squirrel, and what time you should be waking up. He sounds like a tiny chainsaw and looks like a velvet potato.
+Benson is the French Bulldog in Apt 134. Thirty pounds, endlessly friendly, and
+firmly convinced that everyone in the lobby is here to see him.
 
-A few photos are attached. If you want the rest (and the audio), the QR landing is here:
+The main photo is attached. The full gallery -- and the QR code for the flyer -- is at:
 https://emurray32.github.io/benson/
 
 Thanks,
 Eric
+
+---
+Note: his name is Benson, not Bentley.

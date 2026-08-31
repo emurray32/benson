@@ -3,283 +3,278 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Benson — Pet of the Month, The Gunther</title>
-<meta name="description" content="Officially the best dog at The Gunther. Documented evidence below.">
-<style>
-  :root {
-    --ink: #1a1a1a;
-    --paper: #fbf6ec;
-    --accent: #c97a2b;
-    --accent-dark: #7d4515;
-    --caption-bg: rgba(255, 252, 245, 0.96);
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: ui-rounded, "SF Pro Rounded", "Avenir Next", system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
-  }
-  header {
-    text-align: center;
-    padding: 48px 24px 24px;
-    position: relative;
-  }
-  .crown {
-    font-size: 56px;
-    line-height: 1;
-    display: inline-block;
-    transform: rotate(-6deg);
-  }
-  h1 {
-    font-family: Georgia, "Playfair Display", serif;
-    font-weight: 900;
-    font-size: clamp(40px, 8vw, 80px);
-    margin: 8px 0 4px;
-    letter-spacing: -0.02em;
-    color: var(--accent-dark);
-  }
-  .sub {
-    font-size: clamp(15px, 2vw, 19px);
-    color: #6a4a2a;
-    margin: 0 auto;
-    max-width: 620px;
-    padding: 0 16px;
-  }
-  .sub em { color: var(--accent); font-style: normal; font-weight: 700; }
-  .ribbon {
-    display: inline-block;
-    background: var(--accent);
-    color: white;
-    padding: 6px 22px;
-    font-weight: 800;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-size: 13px;
-    border-radius: 4px;
-    margin-top: 14px;
-    box-shadow: 0 2px 0 var(--accent-dark);
-  }
-  main {
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 24px 16px 80px;
-  }
-  .gallery {
-    columns: 3 280px;
-    column-gap: 18px;
-  }
-  .card {
-    break-inside: avoid;
-    margin-bottom: 18px;
-    border-radius: 14px;
-    overflow: hidden;
-    background: white;
-    box-shadow:
-      0 1px 0 rgba(0,0,0,0.04),
-      0 6px 20px rgba(60, 30, 0, 0.10);
-    transform: rotate(var(--tilt, 0deg));
-    transition: transform .25s ease, box-shadow .25s ease;
-  }
-  .card:hover {
-    transform: rotate(0deg) scale(1.02);
-    box-shadow: 0 10px 28px rgba(60, 30, 0, 0.20);
-  }
-  .card img {
-    display: block;
-    width: 100%;
-    height: auto;
-    background: #eee;
-  }
-  .caption {
-    padding: 12px 16px 14px;
-    font-size: 15px;
-    font-weight: 600;
-    color: #2a1a05;
-    background: var(--caption-bg);
-    border-top: 2px dashed rgba(201, 122, 43, 0.4);
-  }
-  .caption .small { display:block; font-size: 12px; font-weight: 500; color: #8a6240; margin-top: 4px; letter-spacing: 0.04em; text-transform: uppercase; }
-  footer {
-    text-align: center;
-    padding: 40px 20px 64px;
-    color: #8a6240;
-    font-size: 14px;
-  }
-  footer .stamp {
-    display: inline-block;
-    border: 2px solid var(--accent);
-    color: var(--accent-dark);
-    padding: 10px 22px;
-    border-radius: 8px;
-    font-weight: 800;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    transform: rotate(-3deg);
-    margin-bottom: 12px;
-  }
-  .card:nth-child(3n+1) { --tilt: -1.2deg; }
-  .card:nth-child(3n+2) { --tilt:  0.8deg; }
-  .card:nth-child(3n+3) { --tilt: -0.4deg; }
-
-  /* Audio banner — sits between gallery and footer stamp */
-  .audio-banner {
-    max-width: 720px;
-    margin: 8px auto 0;
-    padding: 28px 28px 24px;
-    background: radial-gradient(circle at 30% 30%, #e8c98a 0%, #c97a2b 65%, #7d4515 100%);
-    color: #fffaf0;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 6px 22px rgba(60, 30, 0, 0.18);
-  }
-  .audio-banner .emoji { font-size: 44px; line-height: 1; }
-  .audio-banner h3 {
-    margin: 8px 0 4px;
-    font-family: Georgia, "Playfair Display", serif;
-    font-weight: 900;
-    font-size: 32px;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    text-shadow: 0 2px 0 rgba(0,0,0,0.15);
-  }
-  .audio-banner p {
-    margin: 0 0 16px;
-    font-size: 12px;
-    opacity: 0.92;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    font-weight: 700;
-  }
-  .audio-banner audio {
-    width: 100%;
-    max-width: 480px;
-    display: block;
-    margin: 0 auto;
-  }
-</style>
+<title>Benson · Pet of the Month</title>
+<meta name="description" content="Benson, the French Bulldog in Apt 134 — September 2026 Pet of the Month at The Gunther.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Karla:wght@400;500;700&display=swap">
 </head>
 <body>
-<header>
-  <div class="crown">👑</div>
-  <h1>Benson</h1>
-  <p class="sub">Pet of the Month at <em>The Gunther</em>, Baltimore · September 2026<br>
-  Thirty pounds of pure, unfiltered opinion.</p>
-  <span class="ribbon">Pet of the Month</span>
-</header>
 
-<main>
-  <div class="gallery">
+<style>
+/* Palette drawn from Benson himself: a blue-coat Frenchie (slate), warm paper,
+   and a brass note for the award framing. Neutrals carry a slight blue bias so
+   they sit with the slate rather than beside it. */
+:root{
+  --paper:#EDEAE4;
+  --surface:#FBFAF7;
+  --surface-2:#E4E0D8;
+  --ink:#23262B;
+  --ink-2:#5B6672;
+  --ink-3:#8A9099;
+  --slate:#5B6672;
+  --brass:#9A7826;
+  --rule:#D5D0C6;
+  --shadow:rgba(35,38,43,.13);
+  --shadow-lift:rgba(35,38,43,.22);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#1A1D21;
+    --surface:#24282D;
+    --surface-2:#2E3238;
+    --ink:#E9E6E0;
+    --ink-2:#A9B0B8;
+    --ink-3:#7C838B;
+    --slate:#94A0AC;
+    --brass:#D0A945;
+    --rule:#383D43;
+    --shadow:rgba(0,0,0,.45);
+    --shadow-lift:rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#1A1D21;
+  --surface:#24282D;
+  --surface-2:#2E3238;
+  --ink:#E9E6E0;
+  --ink-2:#A9B0B8;
+  --ink-3:#7C838B;
+  --slate:#94A0AC;
+  --brass:#D0A945;
+  --rule:#383D43;
+  --shadow:rgba(0,0,0,.45);
+  --shadow-lift:rgba(0,0,0,.6);
+}
 
-    <figure class="card">
-      <img src="perch.jpg" alt="Benson perched on a sleeping human, staring at the camera">
-      <figcaption class="caption">Night security. The human is offline.<span class="small">Overnight supervisor</span></figcaption>
-    </figure>
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:Karla,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:16px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
 
-    <figure class="card">
-      <img src="playbow.jpg" alt="Benson in a play-bow on a black bedspread">
-      <figcaption class="caption">This is not a request.<span class="small">Play-bow diplomacy</span></figcaption>
-    </figure>
+.wrap{max-width:1160px;margin:0 auto;padding:0 24px;}
 
-    <figure class="card">
-      <img src="lookback.jpg" alt="Benson looking back over his shoulder on the bed">
-      <figcaption class="caption">I heard the treat bag from here.<span class="small">Rear-view gossip</span></figcaption>
-    </figure>
+/* ---- Masthead: reads as a building plaque, not a hero banner ---- */
+.plaque{
+  max-width:640px;
+  margin:0 auto;
+  padding:88px 0 40px;
+  text-align:center;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+.award{
+  display:flex;align-items:center;gap:14px;
+  font-size:11px;font-weight:700;
+  letter-spacing:.28em;text-transform:uppercase;
+  color:var(--brass);
+}
+.award::before,.award::after{
+  content:"";display:block;width:34px;height:1px;background:var(--brass);opacity:.55;
+}
+h1{
+  font-family:Fraunces,Georgia,"Times New Roman",serif;
+  font-weight:400;
+  font-size:clamp(58px,12vw,116px);
+  line-height:.86;
+  letter-spacing:-.025em;
+  margin:0;
+  text-wrap:balance;
+}
+.intro{
+  font-size:clamp(16px,2vw,18.5px);
+  color:var(--ink-2);
+  margin:0;
+  max-width:34em;
+  text-wrap:pretty;
+}
+.stamp{
+  display:flex;flex-wrap:wrap;justify-content:center;
+  gap:6px 0;
+  padding-top:20px;
+  border-top:1px solid var(--rule);
+  width:min(360px,100%);
+  font-size:11px;font-weight:700;
+  letter-spacing:.19em;text-transform:uppercase;
+  color:var(--ink-3);
+}
+.stamp b{font-weight:700;color:var(--slate);}
+.stamp i{font-style:normal;padding:0 10px;color:var(--rule);}
 
+/* ---- Portrait ---- */
+.portrait{display:flex;justify-content:center;padding:4px 0 0;}
+.portrait img{
+  display:block;
+  max-width:100%;
+  max-height:74vh;
+  width:auto;height:auto;
+  border-radius:3px;
+  box-shadow:0 18px 46px var(--shadow);
+}
 
-    <figure class="card">
-      <img src="bourbon.jpg" alt="Benson posing next to a bottle of Bardstown bourbon">
-      <figcaption class="caption">"I'd like to make a toast."<span class="small">Sophisticated palate</span></figcaption>
-    </figure>
+/* ---- Gallery ---- */
+.gallery{
+  columns:3 290px;
+  column-gap:20px;
+  padding:64px 0 8px;
+}
+.shot{
+  break-inside:avoid;
+  margin:0 0 20px;
+  padding:0;
+  border-radius:3px;
+  overflow:hidden;
+  background:var(--surface-2);
+  box-shadow:0 2px 8px var(--shadow);
+  cursor:zoom-in;
+  transition:transform .28s cubic-bezier(.2,.7,.3,1), box-shadow .28s ease;
+}
+.shot:hover,.shot:focus-visible{
+  transform:translateY(-4px);
+  box-shadow:0 14px 30px var(--shadow-lift);
+}
+.shot:focus-visible{outline:2px solid var(--brass);outline-offset:3px;}
+.shot img{display:block;width:100%;height:auto;}
 
-    <figure class="card">
-      <img src="shocked.jpg" alt="Benson with wide eyes and tongue poking out, looking shocked">
-      <figcaption class="caption">Wait. You SAW that?<span class="small">Caught in the act</span></figcaption>
-    </figure>
+/* ---- Audio ---- */
+.listen{
+  max-width:480px;
+  margin:40px auto 0;
+  padding:30px 30px 26px;
+  background:var(--surface);
+  border:1px solid var(--rule);
+  border-radius:4px;
+  text-align:center;
+  display:flex;flex-direction:column;align-items:center;gap:16px;
+}
+.listen h2{
+  font-family:Fraunces,Georgia,serif;
+  font-weight:400;font-size:25px;margin:0;letter-spacing:-.01em;
+}
+.listen audio{width:100%;max-width:380px;}
 
-    <figure class="card">
-      <img src="wig.jpg" alt="Benson with a wig of human hair on his head, chewing a ribbon">
-      <figcaption class="caption">First day at the office. Going great.<span class="small">Power look</span></figcaption>
-    </figure>
+footer{
+  text-align:center;
+  padding:64px 24px 84px;
+  color:var(--ink-3);
+  font-size:11px;font-weight:700;
+  letter-spacing:.19em;text-transform:uppercase;
+}
 
-    <figure class="card">
-      <img src="tilt.jpg" alt="Benson head-tilting at the camera">
-      <figcaption class="caption">Did you say... <em>walk</em>?<span class="small">Vocabulary of 4</span></figcaption>
-    </figure>
+/* ---- Lightbox ---- */
+.lb{
+  position:fixed;inset:0;
+  background:rgba(16,18,21,.95);
+  display:none;align-items:center;justify-content:center;
+  padding:28px;z-index:99;cursor:zoom-out;
+}
+.lb.open{display:flex;}
+.lb img{max-width:100%;max-height:100%;border-radius:3px;}
+.lb button{
+  position:absolute;top:16px;right:20px;
+  background:none;border:none;color:#EDEAE4;
+  font-size:32px;line-height:1;padding:10px;cursor:pointer;
+}
+.lb button:focus-visible{outline:2px solid #D0A945;outline-offset:2px;}
 
-    <figure class="card">
-      <img src="burrito.jpg" alt="Benson swaddled in a blue blanket like a burrito">
-      <figcaption class="caption">Reporting live from inside the burrito.<span class="small">Field correspondent</span></figcaption>
-    </figure>
+/* ---- Entrance, once, quietly ---- */
+@keyframes rise{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:none;}}
+.plaque,.portrait{animation:rise .7s cubic-bezier(.2,.7,.3,1) both;}
+.portrait{animation-delay:.12s;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important;}
+}
 
-    <figure class="card">
-      <img src="upsidedown.jpg" alt="Benson upside down with one eye visible">
-      <figcaption class="caption">"This is fine. Everything is fine."<span class="small">Emotional range</span></figcaption>
-    </figure>
+@media (max-width:640px){
+  .wrap{padding:0 16px;}
+  .plaque{padding:52px 0 28px;gap:16px;}
+  .gallery{columns:1;padding:40px 0 4px;}
+  .listen{margin-top:28px;padding:24px 20px 20px;}
+}
+</style>
+<div class="wrap">
+  <header class="plaque">
+    <p class="award">Pet of the Month</p>
+    <h1>Benson</h1>
+    <p class="intro">Benson is the French Bulldog in Apt&nbsp;134. Thirty pounds, endlessly friendly, and firmly convinced that everyone in the lobby is here to see him.</p>
+    <p class="stamp"><b>September 2026</b><i>&middot;</i><span>The Gunther</span><i>&middot;</i><span>Baltimore, MD</span></p>
+  </header>
 
-    <figure class="card">
-      <img src="laptop.jpg" alt="Benson sitting next to a laptop watching closely">
-      <figcaption class="caption">Working from home. Closely.<span class="small">Email auditor</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <img src="heatpad.jpg" alt="Benson lounging on a heating pad like royalty">
-      <figcaption class="caption">The throne is heated. Bow accordingly.<span class="small">Lifestyle creep</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <img src="wrinkly.jpg" alt="Close-up of Benson's wrinkly sleeping face with a yellow collar">
-      <figcaption class="caption">Do not perceive me. I am simply ham.<span class="small">Maximum potato</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <img src="sploot.jpg" alt="Benson splooting flat for a nap on an orange and green blanket">
-      <figcaption class="caption">Battery: 0%. Do not disturb.<span class="small">World-class sploot</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <img src="bigear.jpg" alt="Benson with one ear standing dramatically taller than the other">
-      <figcaption class="caption">All ears. Mostly the one.<span class="small">Reception is great</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <img src="detective.jpg" alt="Benson on a Baltimore sidewalk in a harness, investigating the ground">
-      <figcaption class="caption">Conducting important sidewalk forensics.<span class="small">Field work</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <img src="peek.jpg" alt="One eye of Benson visible, the rest of his face buried in a blanket">
-      <figcaption class="caption">Witness protection program.<span class="small">Identity protected</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <img src="pilsner.jpg" alt="Benson on the couch in the Pilsner apartment with brick archway behind">
-      <figcaption class="caption">Yes the brick is original. Yes I came with it.<span class="small">Real estate mogul</span></figcaption>
-    </figure>
-
-    <figure class="card">
-      <img src="judge.jpg" alt="Benson standing on a blue couch staring directly at the camera">
-      <figcaption class="caption">Yes I see you. Yes I am judging.<span class="small">The verdict</span></figcaption>
-    </figure>
-
+  <div class="portrait">
+    <img src="Benson-hero.jpg" alt="Benson resting on a heat pad, looking at the camera">
   </div>
-</main>
 
-<section class="audio-banner" aria-label="Audio: Benson Noises">
-  <div class="emoji">🎧</div>
-  <h3>Benson Noises</h3>
-  <p>Field recording · Puppuccino</p>
-  <audio controls preload="none">
-    <source src="benson-noises.m4a" type="audio/mp4">
-    Your browser doesn't support audio playback. Lucky you.
-  </audio>
-</section>
+  <main class="gallery" id="gallery">
+      <figure class="shot" tabindex="0"><img src="Benson-24.jpg" alt="Benson half asleep, wedged into an armchair with one eye open" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-08.jpg" alt="Benson on the floor beside his toy, looking up" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-07.jpg" alt="Benson on a Baltimore sidewalk in his harness" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-25.jpg" alt="Benson standing on the couch, looking straight at the camera" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-05.jpg" alt="Benson on the couch in front of a brick archway" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-09.jpg" alt="Benson lying upside down" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-10.jpg" alt="Benson splooting flat for a nap" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-26.jpg" alt="Benson asleep on a waffle-knit blanket, cheek squished flat" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-11.jpg" alt="Benson perched on a sleeping person" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-13.jpg" alt="Benson looking back over his shoulder" loading="lazy"></figure>
+      <figure class="shot" tabindex="0"><img src="Benson-14.jpg" alt="Benson in a play-bow" loading="lazy"></figure>
+  </main>
 
-<footer>
-  <div class="stamp">Certified Good Boy</div>
-  <p>Benson · The Gunther · Baltimore, MD</p>
-</footer>
+  <section class="listen">
+    <h2>Listen to Benson</h2>
+    <audio controls preload="none"><source src="benson-noises.m4a" type="audio/mp4">Your browser doesn't support audio playback.</audio>
+  </section>
+
+  <footer>Benson &nbsp;&middot;&nbsp; The Gunther &nbsp;&middot;&nbsp; Baltimore, MD</footer>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Enlarged photo">
+  <button type="button" aria-label="Close">&times;</button>
+  <img src="" alt="">
+</div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'), img=lb.querySelector('img'), last=null;
+  function open(src,alt,el){
+    img.src=src; img.alt=alt; last=el;
+    lb.classList.add('open'); document.body.style.overflow='hidden';
+    lb.querySelector('button').focus();
+  }
+  function close(){
+    lb.classList.remove('open'); img.removeAttribute('src');
+    document.body.style.overflow='';
+    if(last) last.focus();
+  }
+  document.getElementById('gallery').addEventListener('click',function(e){
+    var t=e.target.closest('.shot'); if(!t) return;
+    var i=t.querySelector('img'); open(i.currentSrc||i.src, i.alt, t);
+  });
+  document.getElementById('gallery').addEventListener('keydown',function(e){
+    if(e.key!=='Enter'&&e.key!==' ') return;
+    var t=e.target.closest('.shot'); if(!t) return;
+    e.preventDefault();
+    var i=t.querySelector('img'); open(i.currentSrc||i.src, i.alt, t);
+  });
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'&&lb.classList.contains('open')) close();
+  });
+})();
+</script>
 </body>
 </html>
