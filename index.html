@@ -3,8 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Benson — Pet of the Month, The Gunther</title>
-<meta name="description" content="Officially the best dog at The Gunther. Documented evidence below.">
+<title>Benson, Pet of the Month</title>
+<meta name="description" content="Benson, October 2026 Pet of the Month at The Gunther in Baltimore.">
+<meta property="og:title" content="Benson, Pet of the Month">
+<meta property="og:description" content="October 2026 · The Gunther · Baltimore, MD">
+<meta property="og:image" content="photo-01.jpg">
 <style>
   :root {
     --ink: #1a1a1a;
@@ -159,114 +162,260 @@
     display: block;
     margin: 0 auto;
   }
+
+  /* ---- V2 additions, drawn from the same palette ---- */
+  .tag {
+    position: relative;
+    max-width: 560px;
+    margin: 18px auto 12px;
+    padding: 36px 30px 24px;
+    background: #ecd9a6;
+    color: #3b2a12;
+    border-radius: 6px 22px 6px 6px;
+    box-shadow: 0 10px 28px rgba(60, 30, 0, 0.16);
+    transform: rotate(1.2deg);
+  }
+  .tag .hole {
+    position: absolute; top: 15px; left: 50%;
+    width: 16px; height: 16px; margin-left: -8px; border-radius: 50%;
+    background: var(--paper); box-shadow: inset 0 1px 3px rgba(0,0,0,.3);
+  }
+  .tagHead {
+    font-family: Georgia, "Playfair Display", serif;
+    font-weight: 900; font-size: 26px; color: var(--accent-dark);
+    text-align: center; margin: 8px 0 16px;
+  }
+  .tag dl { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 9px 16px; }
+  .tag dt {
+    font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase;
+    color: #8a6240; padding-top: 3px;
+  }
+  .tag dd { margin: 0; font-size: 16px; font-weight: 600; border-bottom: 1px dashed rgba(125, 69, 21, .3); padding-bottom: 8px; }
+  .tag dd.status { color: var(--accent); font-weight: 800; border-bottom: none; }
+
+  .section-title { text-align: center; margin: 56px 0 26px; }
+  .section-title h2 {
+    font-family: Georgia, "Playfair Display", serif; font-weight: 900;
+    font-size: clamp(32px, 5vw, 52px); letter-spacing: -0.02em;
+    color: var(--accent-dark); margin: 0;
+  }
+  .section-title p { margin: 6px 0 0; color: #6a4a2a; font-size: 17px; }
+  .gallery.baby { columns: 4 210px; }
+
+  @media (max-width: 560px) {
+    .tag { margin: 14px 16px 8px; padding: 32px 20px 20px; transform: rotate(.6deg); }
+    .tag dl { grid-template-columns: 1fr; gap: 2px; }
+    .tag dt { padding-top: 10px; }
+    .gallery.baby { columns: 2 150px; }
+  }
+
+  /* ---- bottom pair: Specimen Record beside Benson Noises ---- */
+  .pair {
+    max-width: 980px;
+    margin: 8px auto 0;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+    gap: 28px;
+    align-items: stretch;
+  }
+  .pair .tag { max-width: none; margin: 0; transform: rotate(-1deg); }
+  .pair .audio-banner {
+    max-width: none; margin: 0;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    padding: 34px 28px;
+    transform: rotate(0.8deg);
+  }
+  .pair .audio-banner .emoji { font-size: 52px; }
+  .pair .audio-banner h3 { font-size: clamp(26px, 3.2vw, 34px); }
+  .pair .audio-banner audio { max-width: 340px; }
+  @media (max-width: 760px) {
+    .pair { grid-template-columns: 1fr; gap: 22px; }
+    .pair .tag, .pair .audio-banner { transform: none; }
+  }
+  @media (max-width: 560px) {
+    .pair .tag { margin: 0; }
+  }
+  .pair .tag { padding: 30px 26px 20px; }
+  .pair .tagHead { font-size: 24px; margin: 6px 0 12px; }
+  .pair .tag dl { gap: 6px 14px; }
+  .pair .tag dd { font-size: 15px; padding-bottom: 6px; }
+
+  /* ---- final: featured top row ---- */
+  .featured {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px; margin: 4px 0 18px;
+  }
+  .featured .card { margin: 0; }
+  .featured .card img { aspect-ratio: 3 / 4; object-fit: cover; }
+  .featured .card:nth-child(1) { --tilt: -1.6deg; }
+  .featured .card:nth-child(2) { --tilt:  1.2deg; }
+  .featured .card:nth-child(3) { --tilt: -0.8deg; }
+  @media (max-width: 760px) { .featured { grid-template-columns: 1fr; max-width: 460px; margin: 4px auto 18px; } }
+
+  /* ---- final: livelier background ---- */
+  body {
+    background-color: #fbf0de;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='%23c97a2b' fill-opacity='0.09'%3E%3Cg transform='translate(34 36) rotate(-18)'%3E%3Cellipse cx='0' cy='8' rx='9' ry='7.5'/%3E%3Cellipse cx='-9' cy='-4' rx='3.4' ry='4.4'/%3E%3Cellipse cx='-3' cy='-9' rx='3.4' ry='4.4'/%3E%3Cellipse cx='4' cy='-9' rx='3.4' ry='4.4'/%3E%3Cellipse cx='10' cy='-4' rx='3.4' ry='4.4'/%3E%3C/g%3E%3Cg transform='translate(104 100) rotate(22)'%3E%3Cellipse cx='0' cy='8' rx='9' ry='7.5'/%3E%3Cellipse cx='-9' cy='-4' rx='3.4' ry='4.4'/%3E%3Cellipse cx='-3' cy='-9' rx='3.4' ry='4.4'/%3E%3Cellipse cx='4' cy='-9' rx='3.4' ry='4.4'/%3E%3Cellipse cx='10' cy='-4' rx='3.4' ry='4.4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+      radial-gradient(ellipse 120% 60% at 50% 0%, #f9d9a8 0%, rgba(249,217,168,0) 70%),
+      linear-gradient(180deg, #fbeedb 0%, #fbf3e6 45%, #f7e7cf 100%);
+    background-repeat: repeat, no-repeat, no-repeat;
+  }
+  header { isolation: isolate; overflow: visible; }
+  header::before {
+    content: ""; position: absolute; z-index: -1;
+    left: 50%; top: -40px; width: 900px; height: 560px; transform: translateX(-50%);
+    background: repeating-conic-gradient(from -3deg at 50% 42%, rgba(201,122,43,.17) 0deg 6deg, rgba(201,122,43,0) 6deg 12deg);
+    -webkit-mask-image: radial-gradient(circle at 50% 42%, #000 0, #000 22%, transparent 62%);
+            mask-image: radial-gradient(circle at 50% 42%, #000 0, #000 22%, transparent 62%);
+    pointer-events: none;
+  }
+  html, body { overflow-x: hidden; }
+
 </style>
 </head>
 <body>
 <header>
   <div class="crown">👑</div>
   <h1>Benson</h1>
+  <p class="sub">Pet of the Month at <em>The Gunther</em>, Baltimore · October 2026</p>
   <span class="ribbon">Pet of the Month</span>
 </header>
 
 <main>
+  <div class="featured">
+    <figure class="card">
+      <img src="photo-01.jpg" alt="Benson staring up at a steak dinner" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-02.jpg" alt="Benson bundled in a blue hoodie" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-03.jpg" alt="Benson wearing a wig" loading="lazy">
+    </figure>
+  </div>
   <div class="gallery">
-
     <figure class="card">
-      <img src="Benson-2022-09-21-124.jpg" alt="Benson in a cream sweater on the couch" loading="lazy">
+      <img src="photo-04.jpg" alt="Benson standing square on the grass" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2026-05-13-340.jpg" alt="Benson upside down, up close" loading="lazy">
+      <img src="photo-05.jpg" alt="Benson upside down, all his teeth showing" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2024-09-19-259.jpg" alt="Benson on the kitchen floor, tongue out" loading="lazy">
+      <img src="photo-06.jpg" alt="Benson looking up with his tongue out" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2025-01-30-268.jpg" alt="Benson stretched out in his crate, looking up" loading="lazy">
+      <img src="photo-07.jpg" alt="Benson wedged into an armchair with one eye open" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2024-08-14-247.jpg" alt="Benson perched on the couch, ears up" loading="lazy">
+      <img src="photo-08.jpg" alt="Benson stretched out in his crate" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2025-06-30-293.jpg" alt="Benson upside down, getting scratches" loading="lazy">
+      <img src="photo-09.jpg" alt="Benson on the couch with his ears up" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2022-12-26-158.jpg" alt="Benson supervising dinner" loading="lazy">
+      <img src="photo-10.jpg" alt="Benson sitting on a purple yoga mat" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2025-07-10-297.jpg" alt="Benson up on two legs" loading="lazy">
+      <img src="photo-11.jpg" alt="Benson upside down getting scratches" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-26.jpg" alt="Benson asleep on a waffle-knit blanket" loading="lazy">
+      <img src="photo-12.jpg" alt="Benson sitting up with his tongue out" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2022-10-23-140.jpg" alt="Benson at the front door, tongue out" loading="lazy">
+      <img src="photo-13.jpg" alt="Benson&#x27;s face upside down on a blanket" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2025-06-18-287.jpg" alt="Benson bundled up in blue" loading="lazy">
+      <img src="photo-14.jpg" alt="Benson asleep, nose to the camera" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2023-06-01-192.jpg" alt="Benson in a wig, unbothered" loading="lazy">
+      <img src="photo-15.jpg" alt="Benson on the front stoop, mouth wide open" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2022-07-30-104.jpg" alt="Benson with his rope toy" loading="lazy">
+      <img src="photo-16.jpg" alt="Benson in a red holiday sweater" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2022-12-04-150.jpg" alt="Benson riding in the car" loading="lazy">
+      <img src="photo-17.jpg" alt="Benson looking up, ready to go" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2024-08-28-251.jpg" alt="Benson at his person’s feet, looking up" loading="lazy">
+      <img src="photo-18.jpg" alt="Benson at someone&#x27;s feet, looking up" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2024-01-24-227.jpg" alt="Benson in his blue sweater" loading="lazy">
+      <img src="photo-19.jpg" alt="Benson in a blue sweater" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-06.jpg" alt="Benson standing on the couch, ears up" loading="lazy">
+      <img src="photo-20.jpg" alt="Benson in a jersey, seen from behind" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2026-05-06-339.jpg" alt="Benson posing beside a bottle" loading="lazy">
+      <img src="photo-21.jpg" alt="Benson standing on the couch" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2022-10-22-139.jpg" alt="Benson out on the sidewalk" loading="lazy">
+      <img src="photo-22.jpg" alt="Benson with one ear up" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2022-11-18-147.jpg" alt="Benson asleep on a blanket" loading="lazy">
+      <img src="photo-23.jpg" alt="Benson&#x27;s sleepy face on a red blanket" loading="lazy">
     </figure>
-
     <figure class="card">
-      <img src="Benson-2025-07-11-298.jpg" alt="Benson at the window" loading="lazy">
+      <img src="photo-24.jpg" alt="Benson sitting in the window" loading="lazy">
     </figure>
+  </div>
 
+  <div class="section-title">
+    <h2>Baby Benson</h2>
+  </div>
+  <div class="gallery baby">
+    <figure class="card">
+      <img src="photo-25.jpg" alt="Puppy Benson&#x27;s wrinkly face up close" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-26.jpg" alt="Puppy Benson peeking out of a fluffy bed" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-27.jpg" alt="Puppy Benson with his tongue out" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-28.jpg" alt="Puppy Benson belly up in a blanket" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-29.jpg" alt="Puppy Benson in a bow tie" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-30.jpg" alt="Puppy Benson in a tie-dye hoodie" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-31.jpg" alt="Puppy Benson in a cone" loading="lazy">
+    </figure>
+    <figure class="card">
+      <img src="photo-32.jpg" alt="Puppy Benson with big eyes" loading="lazy">
+    </figure>
   </div>
 </main>
 
+<div class="pair">
+<aside class="tag" aria-label="Specimen record">
+  <div class="hole" aria-hidden="true"></div>
+  <p class="tagHead">Specimen Record</p>
+  <dl>
+    <dt>Common name</dt><dd>Benson</dd>
+    <dt>Breed</dt><dd>French Bulldog / alien creature</dd>
+    <dt>Weight</dt><dd>30 lbs</dd>
+    <dt>Habitat</dt><dd>Couches, heated pads, directly underfoot</dd>
+    <dt>Diet</dt><dd>Whatever you're eating</dd>
+    <dt>Temperament</dt><dd>Endlessly friendly. Firmly convinced everyone in the lobby is here to see him.</dd>
+    <dt>Known predators</dt><dd>The bath. The vacuum. The word "no."</dd>
+  </dl>
+</aside>
 <section class="audio-banner" aria-label="Audio: Benson Noises">
   <div class="emoji">🎧</div>
   <h3>Benson Noises</h3>
-  <p>Field recording · Puppuccino</p>
+  <p>Benson vs. a Starbucks Puppuccino · Valentine's Day 2023</p>
   <audio controls preload="none">
     <source src="benson-noises.m4a" type="audio/mp4">
-    Your browser doesn't support audio playback. Lucky you.
+    Your browser doesn't support audio playback.
   </audio>
 </section>
+</div>
 
 <footer>
   <div class="stamp">Certified Good Boy</div>
